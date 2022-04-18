@@ -185,7 +185,7 @@ export default {
         links:[
           {name:"About Me",to:"#footer"},
           {name:"Portfolio",to:"portfolio"},
-          {name:"Download CV",to:"download-cv"}
+          {name:"Download CV Now",to:"download-cv"}
         ],
       services:[
         {image:require("../assets/imgs/WhyUs/my-pic1.png"),title:'On Time',description:'All i want to have client setisfaction & this is my aim'},
