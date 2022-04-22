@@ -1,43 +1,40 @@
 <template>
       <v-app>
         <v-row class="mb-4 font">
-              <v-col cols="4" class="deep-purple lighten-1">
-                      <p class="text-h4 white--text text-center">Portfolio</p>
-                      <div style="margin-top: 150px;border: 10px solid #7E57C2;border-radius: 50%;position: relative;left: 50px;width: 125%">
-                        <div style="border: 60px solid white; border-radius: 50%;">
-                          <div style="border: 20px solid #7E57C2; border-radius: 50%;">
-                            <v-img src="@/assets/user-picture.jpg" height="100%" class="rounded-circle d-flex ma-auto"></v-img>
-                          </div>
-                        </div>
-                      </div>
+          <v-col cols="12" md="4" class="deep-purple lighten-1 pa-7">
+                <p class="text-sm-h text-md-h5 text-lg-h4  white--text text-center mt-6">Portfolio</p>
+                <v-row>
+                  <v-col class="text-center" style="text-align: center">
+
+                        <v-img
+                            src="../assets/user-picture.jpg"
+                            class="rounded-circle img ma-auto"
+                            gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
+                            max-height="300"
+                            max-width="300"
+                        ></v-img>
+                    <p class="text-h5 text-sm-5 text-md-h5 text-lg-h4 mt-7 white--text">Mohammad Al-Mahmoud</p>
+                  </v-col>
+                 </v-row>
               </v-col>
-          <v-col cols="8">
-              <div>
-                <v-chip-group active-class="deep-purple lighten-1 white--text flat">
-                  <nav class="d-flex justify-center" style="width: 100%">
-                    <v-chip v-for="link in links" :key="link.name" class="flat shades text-h5">
-                      <router-link :to="link.to"></router-link>
-                      {{link.name}}
-                    </v-chip>
-                  </nav>
-                </v-chip-group>
-              </div>
+          <v-col cols="12" md="8">
             <div>
               <v-row>
-                <v-col  cols="11">
-                  <div class="mt-16">
-                    <p class="text-sm-h1 text-center" style="margin-top: 390px;font-family: 'Times New Roman'!important;">MY <span style="color:#7E57C2">WORK</span></p>
+                <v-col  cols="12" class="text-center" >
+                  <div style="margin:auto;margin-top:300px;margin-bottom: 200px;">
+                    <p class="text-h4 text-sm-h3 text-md-h2 text-lg-h1 text-center" style="font-family: 'Times New Roman'!important;">MY <span style="color:#7E57C2">WORK</span></p>
                     <p class="text-center text-lg-h6">Web & Visual Designer</p>
                     <div class="text-center mt-10">
-                      <p class="text-uppercase">
-                        <span style="border-radius: 50%;padding: 20px;border: 1px solid black;color: #7E57C2;font-weight: bold" >></span>
+                      <p class="text-uppercase" style="cursor: pointer">
+                        <v-icon class="material-icons-outlined text-h3 text-sm-h2">
+                          mdi-arrow-right-drop-circle
+                        </v-icon>
                         my intro
                       </p>
-
                     </div>
                   </div>
                 </v-col>
-                <v-col cols="1" class="text-uppercase rotated-text" style="color:#7E57C2 ">
+                <v-col cols="1" class="text-uppercase d-none d-sm-flex rotated-text" style="color:#7E57C2 ">
                   follow me
                 </v-col>
               </v-row>
@@ -45,14 +42,10 @@
           </v-col>
           <hr style="width: 100%;background: #7E57C2 ;height: 15px">
         </v-row>
-        <v-container class="font">
+        <v-container class="font ">
           <v-row>
-            <v-col v-for="service in services" :key="service.title">
-              <v-card
-                  :loading="loading"
-                  class="mx-auto my-12"
-                  max-width="374"
-              >
+            <v-col cols="12" md="6" lg="4" v-for="service in services" :key="service.title">
+              <v-card :loading="loading" class="mx-auto my-12" max-width="374">
                 <template slot="progress">
                   <v-progress-linear
                       color="deep-purple"
@@ -60,25 +53,13 @@
                       indeterminate
                   ></v-progress-linear>
                 </template>
-
-                <v-img
-                    height="250"
-                    :src="service.image"
-                    aspect-ratio="1"
-                ></v-img>
-
+                <v-img height="250" :src="service.image" aspect-ratio="1"></v-img>
                 <v-card-title class="justify-center">{{ service.title }}</v-card-title>
-
                 <v-card-text class="text-center">
                   <div class="pa-8">{{service.description}}</div>
                 </v-card-text>
-
                 <v-card-actions class="justify-center">
-                  <v-btn
-                      color="#7E57C2"
-                      class="white--text"
-                      @click="reserve"
-                  >
+                  <v-btn color="#7E57C2" class="white--text" @click="reserve">
                     Learn More
                   </v-btn>
                 </v-card-actions>
@@ -125,17 +106,17 @@
               </v-row>
             </v-container>
             <v-container class="mt-2">
-              <p class="text-h3 text-center">Valuable Testimonial</p>
-              <p class="text-h6 text--secondary text-center">See People Say About Me</p>
+              <p class="text-h5 text-sm-3 text-md-h3 text-lg-h3  text-center">Valuable Testimonial</p>
+              <p class="text-caption text-h6 text--secondary text-center">See People Say About Me</p>
               <v-carousel show-arrows-on-hover hide-delimiter-background>
                 <v-carousel-item v-for="i in aboutMe" :key="i">
-                  <div class="d-flex justify-center ma-10">
+                  <div class="d-flex justify-center ma-sm-10">
                     <div class="about-me text-center">
                       <v-avatar size="150">
                         <v-img :src="i.image" height="100%" style="border: 8px solid #7E57C2;"></v-img>
                       </v-avatar>
                       <p class="text-h5 mt-4">{{ i.title }}</p>
-                      <p class="text--secondary px-16">
+                      <p class="text--secondary px-5">
                         {{i.description}}
                       </p>
                     </div>
@@ -144,7 +125,7 @@
               </v-carousel>
             </v-container>
             <v-container>
-              <p class="text-h3 text-center">Want To Hire Me ?</p>
+              <p class="text-h4 text-sm-h3 text-center">Want To Hire Me ?</p>
               <p class="text-h5 text-center text--secondary mb-16">If You Like My Work</p>
               <div class="hire-me d-flex ma-auto" >
                 <v-text-field  placeholder="Enter Your Email" :loading="loading"  solo class="hire-me-tf"></v-text-field>
@@ -185,7 +166,7 @@ export default {
         links:[
           {name:"About Me",to:"#footer"},
           {name:"Portfolio",to:"portfolio"},
-          {name:"Download CV",to:"download-cv"}
+          {name:"Download CV",to:"/projects"}
         ],
       services:[
         {image:require("../assets/imgs/WhyUs/my-pic1.png"),title:'On Time',description:'All i want to have client setisfaction & this is my aim'},
@@ -260,11 +241,9 @@ export default {
   .about-me{
     border-left: 20px solid #7E57C2 ;
     border-right: 20px solid #7E57C2 ;
-    width: 900px;
-    max-width: 900px;
   }
   .hire-me{
-    width: 60%;
+    
     margin-bottom: 100px !important;
   }
   .hire-me-btn{
@@ -287,5 +266,21 @@ export default {
   color: #372358 !important;
   transform: scale(1.5);
 }
+.img-container{
+  border:15px solid #372358;
+}
+.img-cont{
+  border:10px solid #372358;
+}
+.img{
+  border: 10px solid white;
+}
+
+@media screen and (min-width:600px ) {
+  .hire-me{
+    width: 60%;
+  }
+}
+
 
 </style>
