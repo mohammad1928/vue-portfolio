@@ -166,11 +166,8 @@ export default {
         links:[
           {name:"About Me",to:"#footer"},
           {name:"Portfolio",to:"portfolio"},
-<<<<<<< HEAD
-          {name:"Download CV",to:"/projects"}
-=======
+          {name:"Download CV",to:"/projects"},
           {name:"Download CV Now",to:"download-cv"}
->>>>>>> f4444346ed7811ad039ec5284bf2d31cb4621e81
         ],
       services:[
         {image:require("../assets/imgs/WhyUs/my-pic1.png"),title:'On Time',description:'All i want to have client setisfaction & this is my aim'},
