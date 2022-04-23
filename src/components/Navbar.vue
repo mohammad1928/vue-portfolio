@@ -20,7 +20,7 @@
     <v-navigation-drawer
         class="d-sm-flex d-sm-none d-md-none d-lg-none"
         v-model="drawer"
-        absolute
+        fixed
     >
       <v-list
           nav
