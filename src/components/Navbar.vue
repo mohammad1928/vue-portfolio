@@ -3,8 +3,7 @@
     <v-app-bar
         color="#7e57c2"
         dense
-
-        class=""
+        height="65px"
         app
     >
       <v-app-bar-nav-icon @click="drawer=!drawer" class="white--text d-sm-none"></v-app-bar-nav-icon>
@@ -13,12 +12,13 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn class="white--text font-weight-bold d-none d-sm-flex" text v-for="link in links" :key="link.name" :to="link.to">
+      <v-btn class="white--text font-weight-bold d-none d-sm-flex pa-5 mx-3" text v-for="link in links" :key="link.name" :to="link.to">
         {{link.name}}
       </v-btn>
     </v-app-bar>
 
     <v-navigation-drawer
+        class="d-sm-flex d-sm-none d-md-none d-lg-none"
         v-model="drawer"
         absolute
     >
@@ -53,9 +53,10 @@ export default {
   data(){
     return {
       links: [
-        {name: "About Me", to: "#footer"},
         {name: "Portfolio", to: "/"},
-        {name: "Download CV", to: "/projects"}
+        {name: "Download CV", to: "/projects"},
+        {name: "About Me", to: "#footer"}
+
       ],
       drawer:false,
     };

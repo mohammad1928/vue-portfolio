@@ -2,10 +2,9 @@
       <v-app>
         <v-row class="mb-4 font">
           <v-col cols="12" md="4" class="deep-purple lighten-1 pa-7">
-                <p class="text-sm-h text-md-h5 text-lg-h4  white--text text-center mt-6">Portfolio</p>
-                <v-row>
-                  <v-col class="text-center" style="text-align: center">
-
+                <p class="text-h5 text-lg-h4  white--text text-center mt-6 mt-sm-10">Portfolio</p>
+                <v-row class="mt-sm-16">
+                  <v-col class="text-center mt-sm-16">
                         <v-img
                             src="../assets/user-picture.jpg"
                             class="rounded-circle img ma-auto"
@@ -164,10 +163,9 @@ export default {
   data(){
     return{
         links:[
-          {name:"About Me",to:"#footer"},
           {name:"Portfolio",to:"portfolio"},
           {name:"Download CV",to:"/projects"},
-          {name:"Download CV Now",to:"download-cv"}
+          {name:"About Me",to:"#footer"},
         ],
       services:[
         {image:require("../assets/imgs/WhyUs/my-pic1.png"),title:'On Time',description:'All i want to have client setisfaction & this is my aim'},
