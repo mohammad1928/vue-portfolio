@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Portfolio from "@/views/Portfolio";
 import Projects from "@/views/Projects";
+import Blog from "@/views/Blog/Blog";
+import ManageBlog from "@/views/Blog/ManageBlog";
 
 Vue.use(VueRouter)
 
@@ -15,7 +17,17 @@ const routes = [
     name: 'projects',
     path: '/projects',
     component:Projects,
-  }
+  },
+  {
+    name: 'blog',
+    path: '/blog',
+    component:Blog,
+  },
+  {
+    name: 'manage-blog',
+    path: '/manage-blog',
+    component:ManageBlog,
+  },
 
 ]
 

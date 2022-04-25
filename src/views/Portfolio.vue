@@ -1,7 +1,7 @@
 <template>
       <v-app>
         <v-row class="mb-4 font">
-          <v-col cols="12" md="4" class="deep-purple lighten-1 pa-7">
+          <v-col  cols="12" md="4" class="deep-purple lighten-1 pa-7">
                 <p class="text-h5 text-lg-h4  white--text text-center mt-6 mt-sm-10">Portfolio</p>
                 <v-row class="mt-sm-16">
                   <v-col class="text-center mt-sm-16">
@@ -33,9 +33,11 @@
                     </div>
                   </div>
                 </v-col>
-                <v-col cols="1" class="text-uppercase d-none d-sm-flex rotated-text" style="color:#7E57C2 ">
-                  follow me
-                </v-col>
+                <div cols="6" class="text-uppercase d-none d-sm-flex rotated-text" style="color:#7E57C2 ">
+                  follow me --------------
+                  <v-btn text class="primary--text"><v-icon>mdi-facebook</v-icon></v-btn>
+                  <v-btn text class="info--text"><v-icon>mdi-twitter</v-icon></v-btn>
+                </div>
               </v-row>
             </div>
           </v-col>
@@ -231,11 +233,11 @@ export default {
     background: #7E57C2 !important;
   }
   .rotated-text{
-    transform: perspective(100px);
-    transform: rotate(90deg);
     position: absolute;
-    right: 0;
-    top: 480px;
+    right: -50px;
+    top: 14%;
+    transform: rotate(90deg);
+
   }
   .about-me{
     border-left: 20px solid #7E57C2 ;

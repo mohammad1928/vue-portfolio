@@ -54,8 +54,8 @@ export default {
     return {
       links: [
         {name: "Portfolio", to: "/"},
-        {name: "Download CV", to: "/projects"},
-        {name: "About Me", to: "#footer"}
+        {name: "Blog", to: "/blog"},
+        {name: "Download CV", to: "#footer"}
 
       ],
       drawer:false,
