@@ -15,6 +15,11 @@
       <v-btn class="white--text font-weight-bold d-none d-sm-flex pa-5 mx-3" text v-for="link in links" :key="link.name" :to="link.to">
         {{link.name}}
       </v-btn>
+      <v-btn class="white--text font-weight-bold d-none d-sm-flex pa-5 mx-3" text>
+        <a href="../assets/CV/cv.pdf" download  class="white--text text-decoration-none">
+          Download CV
+        </a>
+      </v-btn>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -55,7 +60,6 @@ export default {
       links: [
         {name: "Portfolio", to: "/"},
         {name: "Blog", to: "/blog"},
-        {name: "Download CV", to: "#footer"}
 
       ],
       drawer:false,
